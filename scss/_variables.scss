@@ -1,6 +1,9 @@
-@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "node_modules/bulma/sass/utilities/all";
 
 $table-sticky-header-height: 300px !default;
+$table-background-color: $scheme-main !default;
+$table-row-active-background-color: $primary !default;
+$table-row-active-color: $primary-invert !default;
 
 $speed-slow: 150ms !default;
 $speed-slower: 250ms !default;
