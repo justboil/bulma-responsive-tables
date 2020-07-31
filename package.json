@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Responsive collapsable tables for Bulma CSS Framework",
   "homepage": "https://justboil.me/",
+  "main": "main.scss",
+  "style": "css/main.min.css",
   "keywords": [
     "sass",
     "bulma",
@@ -15,6 +17,10 @@
   },
   "author": "Viktor Kuzhelnyi <viktor@justboil.me> (https://justboil.me)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justboil/bulma-responsive-tables.git"
+  },
   "dependencies": {
     "bulma": "^0.9.0"
   },
