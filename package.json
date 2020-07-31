@@ -1,0 +1,24 @@
+{
+  "name": "bulma-responsive-tables",
+  "version": "1.0.0",
+  "description": "Responsive collapsable tables for Bulma CSS Framework",
+  "homepage": "https://justboil.me/",
+  "keywords": [
+    "sass",
+    "bulma",
+    "css",
+    "table",
+    "component"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viktor Kuzhelnyi <viktor@justboil.me> (https://justboil.me)",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
