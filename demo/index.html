@@ -59,7 +59,7 @@
 <section class="hero is-light is-main">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title has-text-centered" style="font-weight: 900; font-size: 3rem">Bulma responsive tables</h1>
+      <h1 class="title has-text-centered">Bulma responsive tables</h1>
       <h3 class="subtitle has-text-centered">Check desktop & mobile layout</h3>
 
       <figure class="image">
@@ -1350,5 +1350,15 @@
 
 <!-- Icons below are for demo-only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+
+<script type="text/javascript">
+  Array.from(document.querySelectorAll('th.is-sortable, button.button')).forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log('jfdjf')
+      alert('This is CSS-only ext for Bulma');
+    });
+  })
+</script>
 </body>
 </html>
