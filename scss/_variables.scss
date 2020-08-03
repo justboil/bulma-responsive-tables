@@ -1,5 +1,7 @@
 @import "node_modules/bulma/sass/utilities/all";
 
+$size-base: 1rem !default;
+
 $table-sticky-header-height: 300px !default;
 $table-background-color: $scheme-main !default;
 $table-row-active-background-color: $primary !default;
@@ -7,3 +9,10 @@ $table-row-active-color: $primary-invert !default;
 
 $speed-slow: 150ms !default;
 $speed-slower: 250ms !default;
+
+$table-image-cell-image-width: $size-base * 1.5 !default;
+$table-image-cell-image-height: $table-image-cell-image-width !default;
+$table-image-cell-collapsed-image-width: $table-image-cell-image-width * 4 !default;
+$table-image-cell-collapsed-image-height: $table-image-cell-collapsed-image-width !default;
+
+$table-row-toggle-cell-width: 40px;

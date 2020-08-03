@@ -25,7 +25,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: $size-base;
     }
 
     // Disables is-*
@@ -38,7 +38,7 @@
     }
 
     &.detail {
-      margin-top: -1rem;
+      margin-top: $size-base * -1;
     }
   }
   tr:not(.detail):not(.is-empty):not(.table-footer) {
@@ -52,8 +52,54 @@
       &:before {
         content: attr(data-label);
         font-weight: $weight-semibold;
-        padding-right: 0.5em;
+        padding-right: $size-base * .5;
         text-align: left;
+      }
+
+      &.is-image-cell {
+        .image {
+          width: $table-image-cell-collapsed-image-width;
+          height: $table-image-cell-collapsed-image-height;
+          margin: 0 auto $size-base * .5;
+        }
+      }
+
+      &.is-progress-cell {
+        span, progress {
+          display: flex;
+          width: 45%;
+          align-items: center;
+          align-self: center;
+        }
+      }
+
+      &.is-checkbox-cell, &.is-image-cell {
+        border-bottom: 0!important;
+      }
+
+      &.is-checkbox-cell, &.is-actions-cell {
+        &:before {
+          display: none;
+        }
+      }
+
+      &.is-label-hidden, &.is-image-cell {
+        &:before {
+          display: none;
+        }
+      }
+
+      &.is-label-hidden {
+        span {
+          display: block;
+          width: 100%;
+        }
+
+        &.is-progress-col {
+          progress {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -65,7 +111,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: $size-base * 1.5;
   }
 
   @include touch {
@@ -108,9 +154,9 @@
         align-items: center;
 
         .icon {
-          margin-left: 0.5rem;
+          margin-left: $size-base * .5;
           margin-right: 0;
-          font-size: 1rem;
+          font-size: $size-base;
         }
 
         &.is-numeric {
@@ -119,7 +165,7 @@
 
           .icon {
             margin-left: 0;
-            margin-right: 0.5rem;
+            margin-right: $size-base * .5;
           }
         }
 
@@ -174,13 +220,15 @@
       }
     }
 
-    .chevron-cell {
+    .is-chevron-cell, .is-checkbox-cell {
+      width: $table-row-toggle-cell-width;
+    }
+
+    .is-chevron-cell {
       vertical-align: middle
     }
 
-    .checkbox-cell {
-      width: 40px;
-
+    .is-checkbox-cell {
       .checkbox {
         vertical-align: middle;
 
@@ -221,12 +269,25 @@
         z-index: 1;
         background: $table-background-color;
       }
+
+      &.is-image-cell {
+        .image {
+          margin: 0 auto;
+          width: $table-image-cell-image-width;
+          height: $table-image-cell-image-height;
+        }
+      }
+
+      &.is-progress-cell {
+        min-width: 5rem;
+        vertical-align: middle;
+      }
     }
   }
 
-  .level:not(.top) {
-    padding-bottom: 1.5rem;
-  }
+  /*.level:not(.top) {
+    padding-bottom: $size-base * 1.5;
+  }*/
 
   .table-wrapper {
     &.has-sticky-header {
@@ -275,6 +336,17 @@
       width: 5em;
       height: 5em;
       border-width: 0.25em;
+    }
+  }
+
+  &.has-pagination {
+    .table-wrapper {
+      margin-bottom: 0;
+
+      &+.notification {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
     }
   }
 }

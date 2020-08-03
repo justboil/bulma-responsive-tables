@@ -12,7 +12,7 @@ function processScss ( outputStyle ) {
   return src('main.scss')
     .pipe(sass({outputStyle}).on('error', sass.logError))
     .pipe(rename(outName))
-    .pipe(dest('./css'))
+    .pipe(dest('./demo/css'))
 }
 
 function processScssExpanded () {
@@ -23,4 +23,13 @@ function processScssCompressed () {
   return processScss('compressed')
 }
 
-exports.default = series(processScssExpanded, processScssCompressed)
+/* Compile Bulma.min.css for demo */
+
+function processBulmaSass () {
+  return src('node_modules/bulma/bulma.sass')
+    .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+    .pipe(rename('bulma.min.css'))
+    .pipe(dest('./demo/css'))
+}
+
+exports.default = series(processScssExpanded, processScssCompressed, processBulmaSass)
