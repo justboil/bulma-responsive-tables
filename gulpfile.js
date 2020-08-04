@@ -4,32 +4,56 @@ const sass = require('gulp-sass')
 
 sass.compiler = require('node-sass')
 
+/* Destination dir (demo or not)? */
+
+function destDir ( isDemo ) {
+  return isDemo ? './demo/css' : './css'
+}
+
+
 /* SCSS & CSS */
 
-function processScss ( outputStyle ) {
+function processScssFn ( outputStyle, isDemo ) {
   const outName = outputStyle === 'compressed' ? 'main.min.css' : 'main.css'
 
   return src('main.scss')
     .pipe(sass({outputStyle}).on('error', sass.logError))
     .pipe(rename(outName))
-    .pipe(dest('./demo/css'))
+    .pipe(dest(destDir(isDemo)))
 }
 
 function processScssExpanded () {
-  return processScss('expanded')
+  return processScssFn('expanded')
 }
 
 function processScssCompressed () {
-  return processScss('compressed')
+  return processScssFn('compressed')
+}
+
+function processScssCompressedDemo () {
+  return processScssFn('compressed', true)
 }
 
 /* Compile Bulma.min.css for demo */
 
-function processBulmaSass () {
+function processBulmaSassFn ( isDemo ) {
   return src('node_modules/bulma/bulma.sass')
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(rename('bulma.min.css'))
-    .pipe(dest('./demo/css'))
+    .pipe(dest(destDir(isDemo)))
 }
 
-exports.default = series(processScssExpanded, processScssCompressed, processBulmaSass)
+function processBulmaSass () {
+  return processBulmaSassFn()
+}
+
+function processBulmaSassDemo () {
+  return processBulmaSassFn(true)
+}
+
+exports.default = series(
+  processScssExpanded,
+  processScssCompressed,
+  processScssCompressedDemo,
+  processBulmaSassDemo
+)
