@@ -2,7 +2,7 @@
 
 [![version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://justboil.github.io/bulma-responsive-tables/)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.github.io/bulma-responsive-tables/)
 
-[![Responsive tables for Bulma CSS Framework](https://justboil.me/images/bulma-responsive-tables/repository-preview-hi-res.png)](https://justboil.github.io/bulma-responsive-tables/)
+[![Responsive tables for Bulma CSS Framework](https://justboil.me/images/bulma-responsive-tables/repository-preview-hi-res.png?v=1.1)](https://justboil.github.io/bulma-responsive-tables/)
 
 **Responsive tables for Bulma CSS Framework** &mdash; Pure HTML & CSS/SCSS.
 
