@@ -50,7 +50,7 @@ Use with scss
 
 ### ... or use as CSS
 
-You may just copy pre-compiled `main.css` or `main.min.css` file from the [repository](https://github.com/justboil/bulma-radio/tree/master/css) or from `node_modules/bulma-radio/css` folder and use it in HTML
+You may just copy pre-compiled `main.css` or `main.min.css` file from the [repository](https://github.com/justboil/bulma-responsive-tables/tree/master/css) or from `node_modules/bulma-responsive-tables/css` folder and use it in HTML
 
 ```html
 <!-- Bulma -->
