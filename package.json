@@ -1,6 +1,6 @@
 {
   "name": "bulma-responsive-tables",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Responsive collapsable tables for Bulma CSS Framework",
   "homepage": "https://justboil.me/",
   "main": "bulma-responsive-tables.scss",
