@@ -1,6 +1,6 @@
 # Bulma Responsive Tables
 
-[![version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://justboil.github.io/bulma-responsive-tables/)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.github.io/bulma-responsive-tables/)
+[![version](https://img.shields.io/npm/v/bulma-responsive-tables.svg)](https://www.npmjs.com/package/bulma-responsive-tables)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.github.io/bulma-responsive-tables/)
 
 [![Responsive tables for Bulma CSS Framework](https://justboil.me/images/bulma-responsive-tables/repository-preview-hi-res.png?v=1.1)](https://justboil.github.io/bulma-responsive-tables/)
 
@@ -10,8 +10,8 @@
 * Pure HTML & CSS/SCSS
 * Built for Bulma CSS Framework
 * No js framework dependencies
+* Ready-to-use CSS
 * SCSS sources with variables
-* Preconfigured webpack
 
 ## Table of Contents
 
@@ -42,19 +42,20 @@ Use with scss
 
 ```scss
 /* Bulma */
-@import "~bulma/bulma";
+@import "node_modules/bulma/bulma";
 
 /* Bulma Responsive Tables */
-@import "~bulma-responsive-tables";
+@import "node_modules/bulma-responsive-tables/bulma-responsive-tables";
 ```
 
 ### ... or use as CSS
 
-You may just copy pre-compiled css file from the repository https://github.com/justboil/bulma-responsive-tables/tree/master/css or node_modules `node_modules/bulma-responsive-tables/css` and use it in HTML
+You may just copy pre-compiled `main.css` or `main.min.css` file from the [repository](https://github.com/justboil/bulma-radio/tree/master/css) or from `node_modules/bulma-radio/css` folder and use it in HTML
 
 ```html
 <!-- Bulma -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
 <!-- Bulma Responsive Tables -->
 <link rel="stylesheet" href="%SOME-LOCAL-PATH%/bulma-responsive-tables/css/main.min.css">
 ```
@@ -75,7 +76,7 @@ JustBoil's free items are limited to community support on GitHub.
 
 The issue list is reserved exclusively for bug reports and feature requests. That means we do not accept usage questions. If you open an issue that does not conform to the requirements, it will be closed.
 
-1. Make sure that you are using the latest version of the package
+1. Make sure you are using the latest version of the package
 2. Provide steps to reproduce
 3. Provide an expected behavior
 4. Describe what is actually happening 
@@ -88,7 +89,7 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 ## Credits
 
-Based on [Buefy's](https://github.com/buefy/buefy) table component for Vue.js & Bulma CSS Framework released under MIT License (Copyright &copy; 2017-2020 [Walter Tommasi](https://github.com/jtommy); Copyright &copy; 2017-2020 [Rafael Beraldo](https://github.com/rafaelpimpa))
+Based on [Buefy's](https://github.com/buefy/buefy) component for Vue.js & Bulma CSS Framework released under MIT License (Copyright &copy; 2017-2020 [Walter Tommasi](https://github.com/jtommy); Copyright &copy; 2017-2020 [Rafael Beraldo](https://github.com/rafaelpimpa))
 
 ## Useful Links
 
