@@ -1,4 +1,6 @@
-@import "node_modules/bulma/sass/utilities/all";
+@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "node_modules/bulma/sass/utilities/derived-variables";
+@import "node_modules/bulma/sass/utilities/mixins";
 
 $size-base: 1rem !default;
 
