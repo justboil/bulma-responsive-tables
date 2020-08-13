@@ -41,11 +41,11 @@ $ npm i bulma-responsive-tables --save
 Use with scss
 
 ```scss
-/* Bulma */
-@import "node_modules/bulma/bulma";
-
 /* Bulma Responsive Tables */
 @import "node_modules/bulma-responsive-tables/bulma-responsive-tables";
+
+/* Bulma */
+@import "node_modules/bulma/bulma";
 ```
 
 ### ... or use as CSS

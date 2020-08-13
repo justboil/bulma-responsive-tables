@@ -124,6 +124,10 @@
   vertical-align: middle;
 }
 
+.b-table .table .is-checkbox-cell .checkbox.b-checkbox {
+  margin-right: 0;
+}
+
 .b-table .table .is-checkbox-cell .checkbox .check {
   transition: none;
 }

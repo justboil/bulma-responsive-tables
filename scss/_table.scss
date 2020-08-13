@@ -232,6 +232,10 @@
       .checkbox {
         vertical-align: middle;
 
+        &.b-checkbox {
+          margin-right: 0;
+        }
+
         .check {
           transition: none;
         }
